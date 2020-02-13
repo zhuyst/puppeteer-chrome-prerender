@@ -9,6 +9,8 @@ RUN apt-get clean && apt-get update && \
 
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
 
+WORKDIR /usr/app/src
+
 RUN npm i puppeteer && rm package-lock.json
 
 CMD ["google-chrome-unstable"]
